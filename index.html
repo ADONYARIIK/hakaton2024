@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <h1 id="nav">Sprawdź, co może przynieść przyszłość na podstawie Twoich danych!</h1>
+   <h2>Odkryj swoją przyszłość tylko za 10 pytań, dzięki naszej innowacyjnej aplikacji internetowej! Wykorzystując inteligentne analizy, tworzymy unikalne prognozy na podstawie Twoich danych. Zanurz się w świecie możliwości, poznaj potencjalne ścieżki swojego życia i odkryj inspiracje, które pomogą Ci kształtować przyszłość. Twoja historia zaczyna się tutaj!</h2>
+   <form id="form">
+       <section>
+           <h1>1. Wiek:</h1>
+           <fieldset>
+               <label>
+                   <input type="number" id="age" min="0" max="100" placeholder="wiek" required>
+               </label>
+               <br></br>
+           </fieldset>
+       </section>
+       <section>
+           <h1>2. Płeć:</h1>
+           <fieldset>
+               <p>
+                   <input name="gender" type="radio" id="male">
+                   <label for="male">Mężczyzna</label><br>
+               </p>
+               <p>
+                   <input name="gender" type="radio" id="female">
+                   <label for="female">Kobieta</label><br>
+               </p> 
+               <p>
+                   <input name="gender" type="radio" id="other">
+                   <label for="other">Inne</label><br>
+               </p> 
+           </fieldset>
+       </section>
+       <section>
+           <h1>3. Marzenie:</h1>
+           <fieldset>
+           <label>
+               <input type="text" id="dream" placeholder="Marzenie">
+           </label>
+           <br></br>
+           </fieldset>
+       </section>
+       <section>
+           <h1>4. Zawód:</h1>
+           <fieldset>
+           <label>
+               <input type="text" id="work" placeholder="Zawód">
+           </label>
+           <br></br>
+           </fieldset>
+       </section>
+       <section>
+           <h1>5. Wynagrodzenie:</h1>
+           <fieldset>
+           <label>
+               <input type="text" id="salary" placeholder="Wynagrodzenie">
+           </label>
+           <br></br>
+           </fieldset>
+       </section>
+       <section>
+           <h1>6. Priorytet rozwoju kariery:</h1>
+           <fieldset>
+               <p>
+                   <input name="career" type="radio" id="careerHigh">
+                   <label for="careerHigh">Wysoki</label><br>
+               </p>
+               <p>
+                   <input name="career" type="radio" id="careerMedium">
+                   <label for="careerMedium">Średni</label><br>
+               </p> 
+               <p>
+                   <input name="career" type="radio" id="careerLow">
+                   <label for="careerLow">Niski</label><br>
+               </p>
+           </fieldset>
+       </section>
+       <section>
+           <h1>7. Kraj zamieszkania:</h1>
+           <fieldset>
+           <label>
+               <input type="text" id="country" placeholder="Kraj zamieszkania">
+           </label>
+           <br></br>
+           </fieldset>
+       </section>
+       <section>
+           <h1>8. Chęć pracy za granicą:</h1>
+           <fieldset>
+               <p>
+                   <input name="workingAbroad" type="radio" id="abroadYes">
+                   <label for="abroadYes">Tak</label><br>
+               </p>
+               <p>
+                   <input name="workingAbroad" type="radio" id="abroadNo">
+                   <label for="abroadNo">Nie</label><br>
+               </p> 
+           </fieldset>
+       </section>
+       <section>
+           <h1>9. Hobby:</h1>
+           <fieldset>
+           <label>
+               <input type="text" id="hobby" placeholder="Hobby" required>
+           </label>
+           <br></br>
+           </fieldset>
+       </section>
+       <section>
+           <h1>10. Ile czasu poświęcić na samorozwój:</h1>
+           <fieldset>
+               <p>
+                   <input name="hours" type="radio" id="selfDevLow">
+                   <label for="selfDevLow">0-2 h</label><br>
+               </p>
+               <p>
+                   <input name="hours" type="radio" id="selfDevMedium">
+                   <label for="selfDevMedium">2-6 h</label><br>
+               </p> 
+               <p>
+                   <input name="hours" type="radio" id="selfDevHeigh">
+                   <label for="selfDevHeigh">6-8 h</label><br>
+               </p>
+           </fieldset>
+       </section>
+       <section>
+           <button type="submit">Zernknij do przyszłości</button>
+       </section>
+       <div id="wynik">
+            <h2>Twoja przepowiednia</h2>
+            <p id="textResult">Masz 40 lat i żyjesz na styku technologii i harmonii. 
+                Jesteś liderem globalnych projektów, pracując zdalnie z inteligentnego, 
+                futurystycznego domu, który łączy naturę z zaawansowaną technologią. 
+                Tenis stał się Twoją medytacją, a rozwój zawodowy płynie naturalnie dzięki AI dostarczającej 
+                wiedzę w tle codzienności. Twoja praca i życie osobiste przenikają się, a międzynarodowe doświadczenia 
+                uczyniły Cię częścią globalnej społeczności. Twoje marzenia stały się rzeczywistością, a przyszłość – 
+                spokojem pełnym możliwości.
+            </p>
+       </div>
+   </form>
+
+   <script>
+       let form = document.getElementById('form');
+       let resultDiv = document.getElementById('wynik');
+       let result = document.getElementById('textResult');
+
+
+       form.addEventListener('submit', async (e) => {
+           e.preventDefault();
+           resultDiv.style.display = 'inline-block';
+
+           const data = {
+               age: document.querySelector('#age').value,
+               male: document.querySelector('#male').value,
+               female: document.querySelector('#female').value,
+               other: document.querySelector('#other').value,
+               salary: document.querySelector('#salary').value,
+               dream: document.querySelector('#dream').value,
+               workplace: document.querySelector('#work').value,
+               careerHigh: document.querySelector('#careerHigh').value,
+               careerMedium: document.querySelector('#careerMedium').value,
+               careerLow: document.querySelector('#careerLow').value,
+               country: document.querySelector('#country').value,
+               abroadYes: document.querySelector('#abroadYes').value,
+               abroadNo: document.querySelector('#abroadNo').value,
+               hobby: document.querySelector('#hobby').value,
+               selfDevLow: document.querySelector('#selfDevLow').value,
+               selfDevMedium: document.querySelector('#selfDevMedium').value,
+               selfDevHigh: document.querySelector('#selfDevHeigh').value,
+           };
+
+           try {
+                   const response = await fetch('http://localhost:3500/hackatoon2024', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data),
+                    });
+                    const responseData = await response.json();
+
+                    console.log(responseData);
+
+                    result.innerHTML = responseData.recievedData;
+           } catch(err) {
+               console.log(err);
+           }
+       });
+   </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+body {
+    background-image: url('https://wallpapercave.com/wp/wp7907749.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 150px;
+
+    font-family: 'Trebuchet MS';
+    text-align: center;
+}
+fieldset{
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(4, 13, 71, 0.503);
+    color: black;
+    border: 2px solid #ffffff00;
+    border-radius: 25px;
+    transition: 0.6s;
+    margin-top: 10px;
+}
+
+ fieldset:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+h1 {
+    margin: auto;
+    width: 700px;
+    padding: 20px;
+    background-color: rgba(56, 56, 209, 0.823);
+    color: black;
+    border: 0px solid #209b97;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+h2{
+    color: #000000;
+}
+
+section {
+    margin-top: 50px;
+}
+
+input[type="text"],
+input[type="number"] {
+    min-height: 50px;
+    min-width: 200px;
+    background-color:rgba(247, 243, 243, 0.589);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding-left: 5px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+}
+
+input[type="radio"] {
+    width: 25px;
+    height: 25px;
+}
+
+button[type="submit"] {
+    transition: 0.5s;
+    border-radius: 30px;
+    font-size: 35px;
+    padding: 15px;
+    border: none;
+    background-color: #4437fc;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+section:nth-child(2) > fieldset {
+    text-align: left;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+section:nth-child(6) > fieldset {
+    text-align: left;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+section:nth-child(8) > fieldset {
+    text-align: left;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+section:nth-child(10) > fieldset {
+    text-align: left;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#nav {
+    margin-top: 0px;
+    padding: 5px;
+    border-radius: 10px;
+    width: auto;
+}
+
+form {
+    position: relative;
+}
+
+#wynik {
+    /* position: absolute; */
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    min-height: 500px;
+    width: 50%;
+    margin: 2% auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#wynik > h2 {
+    color: white;
+    text-shadow: 0px 3px 2px black;
+}
+
+#wynik > p {
+    text-align: left;
+    padding: 10px;
+    font-size: 24px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+}
