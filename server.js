@@ -11,7 +11,7 @@ app.use(logger);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.get('/hackatoon2024', (req,res) => {
+app.get('/hackatoon2024(-u6n7.onrender.com)?', (req,res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 })
 
