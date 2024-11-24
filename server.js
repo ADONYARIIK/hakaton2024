@@ -11,7 +11,7 @@ app.use(logger);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.get('://hakaton2024-u6n7.onrender.com)?', (req,res) => {
+app.get('/hakaton2024-u6n7.onrender.com)?', (req,res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 })
 
