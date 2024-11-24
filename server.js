@@ -2,19 +2,14 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const cors = require('cors');
-const { logger } = require('./middleware/logEvents.js');
-const errorHandler = require('./middleware/errorHandler.js');
+const { logger } = require('./logEvents.js');
+const errorHandler = require('./errorHandler.js');
 const PORT = process.env.PORT || 3500;
 
 app.use(logger);
 
-app.use(express.static(path.join(__dirname, '/public')));
-app.use(express.static(path.join(__dirname, '/middleware')));
-
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-app.use(express.static(path.join(__dirname, '/public')))
 
 app.get('/hackatoon2024', (req,res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
